@@ -1,6 +1,6 @@
 import { ICar } from "./ICar";
 
-abstract class Transporter implements ICar {
+export abstract class Transporter implements ICar {
   abstract createCar(): ICar;
 
   createVehicle(): string {
