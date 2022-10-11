@@ -2,9 +2,7 @@ import { BusCreator } from "./BusCreator";
 import { TruckCreator } from "./TruckCreator";
 
 const truckCreator = new TruckCreator();
-
-truckCreator.createVehicle();
-
 const busCreator = new BusCreator();
 
-busCreator.createVehicle();
+console.log(truckCreator.createVehicle());
+console.log(busCreator.createVehicle());

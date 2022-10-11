@@ -1,6 +1,6 @@
 import { ICar } from "./ICar";
 
-class Bus implements ICar {
+export class Bus implements ICar {
   createVehicle(): string {
     return "Bus";
   }
