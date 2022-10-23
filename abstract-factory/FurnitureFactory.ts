@@ -1,12 +1,16 @@
+import { FlasticFactory } from "./FlasticFactory";
 import { FurnitureAbstractFactory } from "./FurnitureAbstractFactory";
 import { MaterialType } from "./MaterialType";
+import { WoodFactory } from "./WoodFactory";
 export class FurnitureFactory {
   static getFactory(materialType: MaterialType): FurnitureAbstractFactory {
     switch (materialType) {
       case MaterialType.PLASTIC:
-        break;
+        return new FlasticFactory();
+      case MaterialType.WOOD:
+        return new WoodFactory();
       default:
-        break;
+        throw new Error("This furniture is unsupported.");
     }
   }
 }
