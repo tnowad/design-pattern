@@ -1,4 +1,4 @@
-import { FlasticFactory } from "./FlasticFactory";
+import { PlasticFactory } from "./FlasticFactory";
 import { FurnitureAbstractFactory } from "./FurnitureAbstractFactory";
 import { MaterialType } from "./MaterialType";
 import { WoodFactory } from "./WoodFactory";
@@ -6,7 +6,7 @@ export class FurnitureFactory {
   static getFactory(materialType: MaterialType): FurnitureAbstractFactory {
     switch (materialType) {
       case MaterialType.PLASTIC:
-        return new FlasticFactory();
+        return new PlasticFactory();
       case MaterialType.WOOD:
         return new WoodFactory();
       default:
