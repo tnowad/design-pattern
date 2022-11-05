@@ -1,4 +1,4 @@
-import { PlasticFactory } from "./FlasticFactory";
+import { PlasticFactory } from "./PlasticFactory";
 import { FurnitureAbstractFactory } from "./FurnitureAbstractFactory";
 import { MaterialType } from "./MaterialType";
 import { WoodFactory } from "./WoodFactory";
