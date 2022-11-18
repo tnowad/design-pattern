@@ -1,12 +1,14 @@
 import { FurnitureAbstractFactory } from "./FurnitureAbstractFactory";
 import { IChair } from "./IChair";
 import { ITable } from "./ITable";
+import { WoodChair } from "./WoodChair";
+import { WoodTable } from "./WoodTable";
 
 export class WoodFactory extends FurnitureAbstractFactory {
   createChair(): IChair {
-    throw new Error("Method not implemented.");
+    return new WoodChair();
   }
   createTable(): ITable {
-    throw new Error("Method not implemented.");
+    return new WoodTable();
   }
 }
