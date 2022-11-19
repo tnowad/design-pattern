@@ -8,10 +8,16 @@ const plasticFactory: FurnitureAbstractFactory = FurnitureFactory.getFactory(
   MaterialType.PLASTIC
 );
 
-const chair: IChair = plasticFactory.createChair();
+const plasticChair: IChair = plasticFactory.createChair();
+plasticChair.create();
+const plasticTable: ITable = plasticFactory.createTable();
+plasticTable.create();
 
-chair.create();
+const woodFactory: FurnitureAbstractFactory = FurnitureFactory.getFactory(
+  MaterialType.WOOD
+);
 
-const table: ITable = plasticFactory.createTable();
-
-table.create();
+const woodChair: IChair = woodFactory.createChair();
+woodChair.create();
+const woodTable: ITable = woodFactory.createTable();
+woodTable.create();
