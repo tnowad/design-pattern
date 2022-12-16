@@ -1,11 +1,11 @@
 import { Student } from "./Student";
 
-export interface StudentBuilder {
-  setId(id: string): StudentBuilder;
-  setFirstName(firstName: string): StudentBuilder;
-  setLastName(lastName: string): StudentBuilder;
-  setDateOfBirth(dateOfBirth: string): StudentBuilder;
-  setCurrentClass(currentClass: string): StudentBuilder;
-  setPhone(phone: string): StudentBuilder;
+export interface IStudentBuilder {
+  setId(id: string): IStudentBuilder;
+  setFirstName(firstName: string): IStudentBuilder;
+  setLastName(lastName: string): IStudentBuilder;
+  setDateOfBirth(dateOfBirth: string): IStudentBuilder;
+  setCurrentClass(currentClass: string): IStudentBuilder;
+  setPhone(phone: string): IStudentBuilder;
   build(): Student;
 }
