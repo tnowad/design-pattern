@@ -11,5 +11,6 @@ export class RectangleAdapter implements IShape {
     const y: number = Math.min(y1, y2);
     const width: number = Math.abs(x2 - x1);
     const height: number = Math.abs(y2 - y1);
+    this.legacyRectangle.draw(x, y, width, height);
   }
 }
