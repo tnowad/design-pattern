@@ -1,11 +1,13 @@
-import { Car } from "./Car";
-
 export class Flyweight {
-  private sharedState: Car;
-  constructor(car: Car) {
-    this.sharedState = car;
+  private sharedState: any;
+
+  constructor(sharedState: string[]) {
+    this.sharedState = sharedState;
   }
-  operation(uniqueState: Car) {
-    console.log(`Flyweight: `);
+
+  public operation(uniqueState: any): void {
+    const s = JSON.stringify(this.sharedState);
+    const u = JSON.stringify(uniqueState);
+    console.log(`Flyweight: Displaying shared (${s}) and unique (${u}) state.`);
   }
 }
