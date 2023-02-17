@@ -7,7 +7,7 @@ export class RealVideo implements IVideo {
     this.loadFromDisk(this.filename);
   }
   display(): void {
-    throw new Error("Method not implemented.");
+    console.log(`Displaying ${this.filename}`);
   }
   loadFromDisk(filename: string): void {
     console.log(`Loading ${filename}`);
