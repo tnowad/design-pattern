@@ -9,8 +9,11 @@ export abstract class AbstractLogger {
   }
 
   logMessage(loggerType: LoggerType, message: string): void {
-    if (this.loggerType <= loggerType) {
+    if (this.loggerType == loggerType) {
       this.write(message);
+    }
+    if (this.nextLogger) {
+      this.nextLogger.logMessage(loggerType, message);
     }
   }
 
