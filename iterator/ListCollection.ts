@@ -11,8 +11,8 @@ export class ListCollection<T> implements IterableCollection<T> {
   add(element: T) {
     this.list.push(element);
   }
-
-  createIterator(): Iterator<T> {
+  // disable check
+  createIterator(): any {
     return new ListIterator<T>(this.list);
   }
 }
